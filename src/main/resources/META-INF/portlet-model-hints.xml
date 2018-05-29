@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="es.svalero.leaguemanagement.model.League">
+		<field name="uuid" type="String" />
+		<field name="leagueId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+	</model>
+	<model name="es.svalero.leaguemanagement.model.LeagueDay">
+		<field name="uuid" type="String" />
+		<field name="leagueDayId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="leagueId" type="long" />
+		<field name="number" type="String" />
+	</model>
+	<model name="es.svalero.leaguemanagement.model.Match">
+		<field name="uuid" type="String" />
+		<field name="matchId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="localTeamId" type="long" />
+		<field name="visitingTeamId" type="long" />
+		<field name="localScore" type="int" />
+		<field name="visitingScore" type="int" />
+	</model>
+	<model name="es.svalero.leaguemanagement.model.Team">
+		<field name="uuid" type="String" />
+		<field name="teamId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="leagueId" type="long" />
+		<field name="name" type="String" />
+	</model>
+</model-hints>

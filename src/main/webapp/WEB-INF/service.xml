@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="es.svalero.leaguemanagement">
+	<namespace>LM</namespace>
+	<entity name="League" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="leagueId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="name" type="String"></column>
+        <finder name="GroupId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="Team" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="teamId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="leagueId" type="long"></column>
+        <column name="name" type="String"></column>
+        <finder name="GroupIdAndLeagueId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+            <finder-column name="leagueId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="LeagueDay" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="leagueDayId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="leagueId" type="long"></column>
+        <column name="number" type="String"></column>
+        <finder name="GroupIdAndLeagueId" return-type="Collection">
+            <finder-column name="groupId"></finder-column>
+            <finder-column name="leagueId"></finder-column>
+        </finder>
+	</entity>
+	<entity name="Match" local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="matchId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="localTeamId" type="long"></column>
+        <column name="visitingTeamId" type="long"></column>
+        <column name="localScore" type="int"></column>
+        <column name="visitingScore" type="int"></column>
+	</entity>
+</service-builder>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="es.svalero.leaguemanagement.service.LeagueLocalService" class="es.svalero.leaguemanagement.service.impl.LeagueLocalServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.LeagueService" class="es.svalero.leaguemanagement.service.impl.LeagueServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.persistence.LeaguePersistence" class="es.svalero.leaguemanagement.service.persistence.LeaguePersistenceImpl" parent="basePersistence" />
+	<bean id="es.svalero.leaguemanagement.service.LeagueDayLocalService" class="es.svalero.leaguemanagement.service.impl.LeagueDayLocalServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.LeagueDayService" class="es.svalero.leaguemanagement.service.impl.LeagueDayServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.persistence.LeagueDayPersistence" class="es.svalero.leaguemanagement.service.persistence.LeagueDayPersistenceImpl" parent="basePersistence" />
+	<bean id="es.svalero.leaguemanagement.service.MatchLocalService" class="es.svalero.leaguemanagement.service.impl.MatchLocalServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.MatchService" class="es.svalero.leaguemanagement.service.impl.MatchServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.persistence.MatchPersistence" class="es.svalero.leaguemanagement.service.persistence.MatchPersistenceImpl" parent="basePersistence" />
+	<bean id="es.svalero.leaguemanagement.service.TeamLocalService" class="es.svalero.leaguemanagement.service.impl.TeamLocalServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.TeamService" class="es.svalero.leaguemanagement.service.impl.TeamServiceImpl" />
+	<bean id="es.svalero.leaguemanagement.service.persistence.TeamPersistence" class="es.svalero.leaguemanagement.service.persistence.TeamPersistenceImpl" parent="basePersistence" />
+</beans>
